@@ -30,14 +30,17 @@
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Render\Render.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="SpaceShip.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\..\..\Documents\glad\include\glad\glad.h" />
     <ClInclude Include="..\..\..\..\..\..\..\Documents\glad\include\KHR\khrplatform.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Collider.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="InputManager\InputManager.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Material.h" />
@@ -49,6 +52,7 @@
     <ClInclude Include="Program.h" />
     <ClInclude Include="Render\Render.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
