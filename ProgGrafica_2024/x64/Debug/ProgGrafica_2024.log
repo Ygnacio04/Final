@@ -1,0 +1,6 @@
+﻿  Render.cpp
+C:\Users\Harald\OneDrive - U-tad\Year 3 Files\Semestre 2\Prog. Gráfica\PRACTICAS\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Render/Render.cpp")
+  
+C:\Users\Harald\OneDrive - U-tad\Year 3 Files\Semestre 2\Prog. Gráfica\PRACTICAS\P2_ProGraf\ProgGrafica_2024\Render\Render.cpp(231,50): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
+  ProgGrafica_2024.vcxproj -> C:\Users\Harald\OneDrive - U-tad\Year 3 Files\Semestre 2\Prog. Gráfica\PRACTICAS\P2_ProGraf\x64\Debug\ProgGrafica_2024.exe
