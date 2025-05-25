@@ -19,56 +19,40 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bullet.cpp" />
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="InputManager\InputManager.cpp" />
-    <ClCompile Include="Light.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Material.cpp" />
-    <ClCompile Include="Object3D\Object3D.cpp" />
-    <ClCompile Include="OrbitalLight.cpp" />
-    <ClCompile Include="prgr\lib.cpp" />
-    <ClCompile Include="Program.cpp" />
-    <ClCompile Include="Render\Render.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="SpaceShip.cpp" />
-    <ClCompile Include="Sphere.cpp" />
-    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="libprgr\BV.cpp" />
+    <ClCompile Include="libprgr\Camera.cpp" />
+    <ClCompile Include="libprgr\EventManager.cpp" />
+    <ClCompile Include="libprgr\glProgram.cpp" />
+    <ClCompile Include="libprgr\light.cpp" />
+    <ClCompile Include="libprgr\Object3D.cpp" />
+    <ClCompile Include="libprgr\Render.cpp" />
+    <ClCompile Include="libprgr\SpaceShip.cpp" />
+    <ClCompile Include="libprgr\Texture.cpp" />
+    <ClCompile Include="MainPRGR_2024.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\Documents\glad\include\glad\glad.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Documents\glad\include\KHR\khrplatform.h" />
-    <ClInclude Include="Bullet.h" />
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Collider.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="InputManager\InputManager.h" />
-    <ClInclude Include="Light.h" />
-    <ClInclude Include="Material.h" />
-    <ClInclude Include="Object3D\Object3D.h" />
-    <ClInclude Include="OrbitalLight.h" />
-    <ClInclude Include="prgr\common.h" />
-    <ClInclude Include="prgr\lib.h" />
-    <ClInclude Include="prgr\vertex.h" />
-    <ClInclude Include="Program.h" />
-    <ClInclude Include="Render\Render.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="SpaceShip.h" />
-    <ClInclude Include="Sphere.h" />
-    <ClInclude Include="Texture.h" />
+    <ClInclude Include="libprgr\Camera.h" />
+    <ClInclude Include="libprgr\EventManager.h" />
+    <ClInclude Include="libprgr\GlProgram.h" />
+    <ClInclude Include="libprgr\Light.h" />
+    <ClInclude Include="libprgr\BV.h" />
+    <ClInclude Include="libprgr\Object3D.h" />
+    <ClInclude Include="libprgr\Render.h" />
+    <ClInclude Include="libprgr\SpaceShip.h" />
+    <ClInclude Include="libprgr\Texture.h" />
+    <ClInclude Include="libprgr\vectorMath.h" />
+    <ClInclude Include="libprgr\vertex.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="data\kubo.fiis" />
+    <None Include="data\bullet.fiis" />
+    <None Include="data\cube.fiis" />
+    <None Include="data\cubeSplit.fiis" />
+    <None Include="data\cubo.fiis" />
     <None Include="data\piramide.fiis" />
+    <None Include="data\plano.fiis" />
     <None Include="data\shader.frag" />
     <None Include="data\shader.vert" />
-    <None Include="data\shader2.frag" />
-    <None Include="data\shader2.vert" />
-    <None Include="data\sphere.fiis" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="data\cubeText.png" />
+    <None Include="data\spaceShip.fiis" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -166,12 +150,11 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>..\externalLibs\glad\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
