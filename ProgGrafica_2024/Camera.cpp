@@ -60,19 +60,19 @@ Matrix4x4f Camera::lookAtThis()
 
 Matrix4x4f Camera::perspective()
 {
-    Matrix4x4f proj = make_identity();
+	Matrix4x4f proj = make_identity();
 
-    double fovy = toRadians(this->fovy);
-    proj.mat2D[0][0] = 1.0f / (aspectRatio * std::tan(fovy * .5f));
-    proj.mat2D[1][1] = 1.0f / std::tan(fovy * .5f);
-    proj.mat2D[2][2] = -1.0f * (zFar + zNear) / (zFar - zNear);
-    proj.mat2D[3][2] = -1.0f;
+	double fovy = toRadians(this->fovy);
+	proj.mat2D[0][0] = 1.0f / (aspectRatio * std::tan(fovy * .5f));
+	proj.mat2D[1][1] = 1.0f / std::tan(fovy * .5f);
+	proj.mat2D[2][2] = -1.0f * (zFar + zNear) / (zFar - zNear);
+	proj.mat2D[3][2] = -1.0f;
 
-    proj.mat2D[2][3] = 2.0f * zFar * zNear / (zFar - zNear);
-    proj.mat2D[3][3] = 1;
+	proj.mat2D[2][3] = 2.0f * zFar * zNear / (zFar - zNear);
+	proj.mat2D[3][3] = 1;
 
-    return proj;
-};
+	return proj;
+}
 
 void Camera::move(double timeStep)
 {
@@ -118,8 +118,8 @@ void Camera::move(double timeStep)
     lastMouseY = InputManager::mouseState.y;
 
     float mouseSensitivity = 0.1f;
-    this->yaw += deltaX * mouseSensitivity;
-    this->pitch -= deltaY * mouseSensitivity;
+	this->yaw += deltaX * mouseSensitivity;
+	this->pitch -= deltaY * mouseSensitivity;
 
     if (InputManager::keyState[GLFW_KEY_J]) { this->yaw -= 1.0f * timeStep; }
     if (InputManager::keyState[GLFW_KEY_L]) { this->yaw += 1.0f * timeStep; }
@@ -140,38 +140,21 @@ void Camera::move(double timeStep)
     trans.mat2D[2][3] = pos.z;
     coll->update(trans);
 
-    // — comprueba colisión con el cubo de la escena (VERSIÓN JERÁRQUICA) — 
+    // — comprueba colisión con el cubo de la escena — 
     if (auto cubeObj = Render::getObject(CUBE_ID)) {
-        if (cubeObj->coll && coll) {
-
-            // Usa test jerárquico si el cubo está subdividido
-            bool collision = false;
-            if (!cubeObj->coll->isLeaf()) {
-                collision = coll->testHierarchical(cubeObj->coll);
-                std::cout << "Test jerárquico: " << (collision ? "COLISIÓN" : "sin colisión") << std::endl;
-            }
-            else {
-                collision = coll->test(cubeObj->coll);
-            }
-
-            if (collision) {
-                // hay colisión: retrocedemos
-                std::cout << "¡Colisión detectada! Retrocediendo..." << std::endl;
-                pos = oldPos;
-
-                // recomputa lookAt tras retroceso
-                Vector4f direction = normalize(subtract(this->lookAt, oldPos));
-                lookAt.x = pos.x + direction.x;
-                lookAt.y = pos.y + direction.y;
-                lookAt.z = pos.z + direction.z;
-                lookAt.w = 1.0f;
-
-                // y actualiza el colisionador a la posición restaurada
-                trans.mat2D[0][3] = pos.x;
-                trans.mat2D[1][3] = pos.y;
-                trans.mat2D[2][3] = pos.z;
-                coll->update(trans);
-            }
+        if (cubeObj->coll && coll->test(cubeObj->coll)) {
+            // hay colisión: retrocedemos
+            pos = oldPos;
+            // recomputa lookAt tras retroceso
+            lookAt.x = pos.x + normalize(subtract(this->lookAt, oldPos)).x;
+            lookAt.y = pos.y + normalize(subtract(this->lookAt, oldPos)).y;
+            lookAt.z = pos.z + normalize(subtract(this->lookAt, oldPos)).z;
+            lookAt.w = 1.0f;
+            // y actualiza el colisionador a la posición restaurada
+            trans.mat2D[0][3] = pos.x;
+            trans.mat2D[1][3] = pos.y;
+            trans.mat2D[2][3] = pos.z;
+            coll->update(trans);
         }
     }
 }

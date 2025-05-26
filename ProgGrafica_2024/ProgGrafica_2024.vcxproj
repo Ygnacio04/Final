@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="InputManager\InputManager.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="main.cpp" />
@@ -32,17 +30,14 @@
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Render\Render.cpp" />
     <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="SpaceShip.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\..\..\Documents\glad\include\glad\glad.h" />
     <ClInclude Include="..\..\..\..\..\..\..\Documents\glad\include\KHR\khrplatform.h" />
-    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Collider.h" />
-    <ClInclude Include="Enemy.h" />
     <ClInclude Include="InputManager\InputManager.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Material.h" />
@@ -54,25 +49,20 @@
     <ClInclude Include="Program.h" />
     <ClInclude Include="Render\Render.h" />
     <ClInclude Include="Shader.h" />
-    <ClInclude Include="SpaceShip.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="data\bullet.fiis" />
     <None Include="data\kubo.fiis" />
     <None Include="data\piramide.fiis" />
     <None Include="data\shader.frag" />
     <None Include="data\shader.vert" />
     <None Include="data\shader2.frag" />
     <None Include="data\shader2.vert" />
-    <None Include="data\spaceShip.fiis" />
     <None Include="data\sphere.fiis" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="data\bullet.png" />
     <Image Include="data\cubeText.png" />
-    <Image Include="data\ship.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

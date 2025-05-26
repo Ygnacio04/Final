@@ -1,119 +1,42 @@
 #include "Bullet.h"
-#include "Sphere.h"
 #include <iostream>
 
-Bullet::Bullet() : Object3D("data/bullet.fiis") {
-    velocity = make_vector4f(0.0f, 0.0f, 0.0f, 0.0f);
-    active = true;
-    lifeTime = 0.0f;
-    maxLifeTime = 3.0f; // 3 segundos de vida
-    damage = 25.0f;
+Bullet::Bullet(Vector4f startPos, Vector4f shootDirection, float bulletSpeed, float bulletDamage)
+    : Object3D(), speed(bulletSpeed), direction(shootDirection),
+    lifetime(0.0f), maxLifetime(5.0f), active(true), damage(bulletDamage) {
 
-    scale = make_vector4f(0.1f, 0.1f, 0.1f, 1.0f);
-    createPixelCollider();
-}
+    this->position = startPos;
+    this->scale = make_vector4f(0.1f, 0.1f, 0.1f, 1.0f);
 
-Bullet::Bullet(Vector4f startPos, Vector4f direction, float speed) : Bullet() {
-    position = startPos;
-    velocity = make_vector4f(
-        direction.x * speed,
-        direction.y * speed,
-        direction.z * speed,
-        0.0f
-    );
-
-    // Rotar la bala según la dirección
-    float angle = std::atan2(direction.y, direction.x) * 180.0f / M_PI;
-    rotation.z = angle;
-}
-
-Bullet::~Bullet() {
-    // Destructor
+    // Normalizar dirección
+    direction = normalize(direction);
 }
 
 void Bullet::move(double timeStep) {
     if (!active) return;
 
-    // Mover según velocidad
-    position.x += velocity.x * timeStep;
-    position.y += velocity.y * timeStep;
-    position.z += velocity.z * timeStep;
+    // Movimiento de la bala
+    position.x += direction.x * speed * (float)timeStep;
+    position.y += direction.y * speed * (float)timeStep;
+    position.z += direction.z * speed * (float)timeStep;
 
+    // Actualizar tiempo de vida
     updateLifetime(timeStep);
-    checkBounds();
-    updateCollider();
+
+    // Llamar al método padre
+    Object3D::move(timeStep);
 }
 
 void Bullet::updateLifetime(double timeStep) {
-    lifeTime += timeStep;
-    if (lifeTime >= maxLifeTime) {
+    lifetime += (float)timeStep;
+
+    if (lifetime >= maxLifetime) {
         active = false;
+        std::cout << "Bullet expired" << std::endl;
     }
 }
 
-void Bullet::checkBounds() {
-    const float bounds = 6.0f;
-
-    // Desactivar si sale de los límites
-    if (position.x > bounds || position.x < -bounds ||
-        position.y > bounds || position.y < -bounds) {
-        active = false;
-    }
-}
-
-void Bullet::createPixelCollider() {
-    if (!mat || !mat->texture) {
-        // Crear colisionador simple para balas sin textura
-        coll->clearParticles();
-
-        Collider::Particle p;
-        float half = 0.05f;
-        p.min = make_vector4f(-half, -half, -half, 1.0f);
-        p.max = make_vector4f(half, half, half, 1.0f);
-        coll->addParticle(p);
-
-        return;
-    }
-
-    coll->clearParticles();
-
-    float pixelSize = 0.005f; // Balas más pequeñas
-    float textureWidth = static_cast<float>(mat->texture->w);
-    float textureHeight = static_cast<float>(mat->texture->h);
-
-    // Recorrer cada píxel de la textura
-    for (int y = 0; y < mat->texture->h; y++) {
-        for (int x = 0; x < mat->texture->w; x++) {
-            auto& pixel = mat->texture->pixels[y * mat->texture->w + x];
-
-            // Si el píxel no es transparente
-            if (pixel.a > 128) {
-                Collider::Particle p;
-
-                // Convertir coordenadas de píxel a mundo
-                float worldX = (x / textureWidth - 0.5f) * scale.x;
-                float worldY = (y / textureHeight - 0.5f) * scale.y;
-
-                p.min = make_vector4f(
-                    worldX - pixelSize / 2,
-                    worldY - pixelSize / 2,
-                    -pixelSize / 2,
-                    1.0f
-                );
-                p.max = make_vector4f(
-                    worldX + pixelSize / 2,
-                    worldY + pixelSize / 2,
-                    pixelSize / 2,
-                    1.0f
-                );
-
-                coll->addParticle(p);
-            }
-        }
-    }
-
-    // Solo subdivide si hay muchos píxeles (optimización)
-    if (coll->getParticleCount() > 8) {
-        coll->subdivide();
-    }
+bool Bullet::isOutOfBounds(float minX, float maxX, float minY, float maxY) {
+    return (position.x < minX || position.x > maxX ||
+        position.y < minY || position.y > maxY);
 }

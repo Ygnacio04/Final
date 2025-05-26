@@ -15,16 +15,11 @@ private:
 
     // Sistema de disparo
     float fireRate;
-    double lastFireTime;
+    float lastFireTime;
     std::vector<Bullet*> bullets;
-    int maxBullets;
-
-    // Controles
-    bool canMove;
 
 public:
-    SpaceShip();
-    SpaceShip(Vector4f startPos);
+    SpaceShip(Vector4f startPos, float moveSpeed = 2.0f);
     ~SpaceShip();
 
     void move(double timeStep) override;
@@ -33,21 +28,16 @@ public:
     void updateBullets(double timeStep);
     void takeDamage(float damage);
 
-    // Getters/Setters
+    // Getters
     bool isActive() const { return active; }
     float getHealth() const { return health; }
     float getMaxHealth() const { return maxHealth; }
     std::vector<Bullet*>& getBullets() { return bullets; }
 
+    // Setters
     void setActive(bool state) { active = state; }
     void setSpeed(float newSpeed) { speed = newSpeed; }
 
-    // Crear colisionador a nivel de píxel
-    void createPixelCollider();
-
     // Cleanup
     void cleanupInactiveBullets();
-
-private:
-    void constrainToBounds();
 };

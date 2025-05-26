@@ -1,26 +1,14 @@
 #include "SpaceShip.h"
 #include "InputManager/InputManager.h"
-#include "Sphere.h"
+#include "prgr/common.h"
 #include <iostream>
 
-SpaceShip::SpaceShip() : Object3D("data/spaceShip.fiis") {
-    speed = 3.0f;
-    health = 100.0f;
-    maxHealth = 100.0f;
-    active = true;
-    fireRate = 0.2f; // 5 disparos por segundo
-    lastFireTime = 0.0;
-    maxBullets = 10;
-    canMove = true;
+SpaceShip::SpaceShip(Vector4f startPos, float moveSpeed)
+    : Object3D(), speed(moveSpeed), health(100.0f), maxHealth(100.0f),
+    active(true), fireRate(0.3f), lastFireTime(0.0f) {
 
-    position = make_vector4f(0.0f, -3.0f, 0.0f, 1.0f);
-    scale = make_vector4f(0.8f, 0.8f, 0.8f, 1.0f);
-
-    createPixelCollider();
-}
-
-SpaceShip::SpaceShip(Vector4f startPos) : SpaceShip() {
-    position = startPos;
+    this->position = startPos;
+    this->scale = make_vector4f(0.8f, 0.8f, 0.8f, 1.0f);
 }
 
 SpaceShip::~SpaceShip() {
@@ -36,149 +24,68 @@ void SpaceShip::move(double timeStep) {
 
     handleInput(timeStep);
     updateBullets(timeStep);
-    constrainToBounds();
-    updateCollider();
+    cleanupInactiveBullets();
+
+    // Llamar al método padre
+    Object3D::move(timeStep);
 }
 
 void SpaceShip::handleInput(double timeStep) {
-    if (!canMove) return;
-
-    Vector4f movement = make_vector4f(0.0f, 0.0f, 0.0f, 0.0f);
+    float deltaTime = (float)timeStep;
 
     // Movimiento con WASD
-    if (InputManager::keyState[GLFW_KEY_A]) {
-        movement.x -= speed * timeStep;
-    }
-    if (InputManager::keyState[GLFW_KEY_D]) {
-        movement.x += speed * timeStep;
-    }
     if (InputManager::keyState[GLFW_KEY_W]) {
-        movement.y += speed * timeStep;
+        position.y += speed * deltaTime;
     }
     if (InputManager::keyState[GLFW_KEY_S]) {
-        movement.y -= speed * timeStep;
+        position.y -= speed * deltaTime;
+    }
+    if (InputManager::keyState[GLFW_KEY_A]) {
+        position.x -= speed * deltaTime;
+    }
+    if (InputManager::keyState[GLFW_KEY_D]) {
+        position.x += speed * deltaTime;
     }
 
-    position.x += movement.x;
-    position.y += movement.y;
-
-    // Disparar con espacio
+    // Disparo con ESPACIO
     if (InputManager::keyState[GLFW_KEY_SPACE]) {
-        Vector4f shootDirection = make_vector4f(0.0f, 1.0f, 0.0f, 0.0f);
-        shoot(shootDirection);
+        double currentTime = glfwGetTime();
+        if (currentTime - lastFireTime >= fireRate) {
+            shoot(make_vector4f(0, 1, 0, 0)); // Disparar hacia arriba
+            lastFireTime = currentTime;
+        }
     }
 }
 
 void SpaceShip::shoot(Vector4f direction) {
-    double currentTime = glfwGetTime();
+    Vector4f bulletPos = position;
+    bulletPos.y += 0.5f; // Disparar desde arriba de la nave
 
-    // Control de cadencia de disparo
-    if (currentTime - lastFireTime < fireRate) {
-        return;
-    }
-
-    // Límite de balas simultáneas
-    if (bullets.size() >= maxBullets) {
-        cleanupInactiveBullets();
-        if (bullets.size() >= maxBullets) {
-            return;
-        }
-    }
-
-    // Crear nueva bala
-    Vector4f bulletPos = make_vector4f(
-        position.x,
-        position.y + 0.5f, // Disparar desde la parte superior de la nave
-        position.z,
-        1.0f
-    );
-
-    Bullet* newBullet = new Bullet(bulletPos, direction, 8.0f);
+    Bullet* newBullet = new Bullet(bulletPos, direction, 8.0f, 25.0f);
     bullets.push_back(newBullet);
 
-    lastFireTime = currentTime;
-    std::cout << "¡Disparo! Balas activas: " << bullets.size() << std::endl;
+    std::cout << "SpaceShip fired! Total bullets: " << bullets.size() << std::endl;
 }
 
 void SpaceShip::updateBullets(double timeStep) {
     for (auto* bullet : bullets) {
         if (bullet->isActive()) {
             bullet->move(timeStep);
+
+            // Comprobar límites
+            if (bullet->isOutOfBounds(-10.0f, 10.0f, -10.0f, 10.0f)) {
+                bullet->setActive(false);
+            }
         }
     }
-
-    // Limpiar balas inactivas periódicamente
-    static double lastCleanup = 0.0;
-    double currentTime = glfwGetTime();
-    if (currentTime - lastCleanup > 1.0) { // Limpiar cada segundo
-        cleanupInactiveBullets();
-        lastCleanup = currentTime;
-    }
-}
-
-void SpaceShip::constrainToBounds() {
-    const float bounds = 4.0f;
-
-    position.x = std::max(-bounds, std::min(bounds, position.x));
-    position.y = std::max(-4.0f, std::min(3.0f, position.y));
 }
 
 void SpaceShip::takeDamage(float damage) {
     health -= damage;
-    std::cout << "¡Nave dañada! Salud: " << health << "/" << maxHealth << std::endl;
-
     if (health <= 0) {
         active = false;
-        std::cout << "¡GAME OVER!" << std::endl;
-    }
-}
-
-void SpaceShip::createPixelCollider() {
-    if (!mat || !mat->texture) {
-        std::cout << "Error: No hay textura para crear colisionador de píxel" << std::endl;
-        return;
-    }
-
-    coll->clearParticles();
-
-    float pixelSize = 0.01f;
-    float textureWidth = static_cast<float>(mat->texture->w);
-    float textureHeight = static_cast<float>(mat->texture->h);
-
-    // Recorrer cada píxel de la textura
-    for (int y = 0; y < mat->texture->h; y++) {
-        for (int x = 0; x < mat->texture->w; x++) {
-            auto& pixel = mat->texture->pixels[y * mat->texture->w + x];
-
-            // Si el píxel no es transparente
-            if (pixel.a > 128) {
-                Collider::Particle p;
-
-                // Convertir coordenadas de píxel a mundo
-                float worldX = (x / textureWidth - 0.5f) * scale.x;
-                float worldY = (y / textureHeight - 0.5f) * scale.y;
-
-                p.min = make_vector4f(
-                    worldX - pixelSize / 2,
-                    worldY - pixelSize / 2,
-                    -pixelSize / 2,
-                    1.0f
-                );
-                p.max = make_vector4f(
-                    worldX + pixelSize / 2,
-                    worldY + pixelSize / 2,
-                    pixelSize / 2,
-                    1.0f
-                );
-
-                coll->addParticle(p);
-            }
-        }
-    }
-
-    // Solo subdivide si hay muchos píxeles (optimización)
-    if (coll->getParticleCount() > 8) {
-        coll->subdivide();
+        health = 0;
+        std::cout << "SpaceShip destroyed!" << std::endl;
     }
 }
 
