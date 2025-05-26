@@ -378,6 +378,10 @@ void Object3D::updateCollider()
 
 		coll->addParticle(p);
 	}
+	// Solo subdivide si hay muchas partículas
+	if (coll->getParticleCount() > 4) {
+		coll->subdivide();
+	}
 
 	coll->update(modelMatrix);
 }

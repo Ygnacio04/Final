@@ -1,6 +1,32 @@
-﻿  Render.cpp
-C:\Users\Harald\OneDrive - U-tad\Year 3 Files\Semestre 2\Prog. Gráfica\PRACTICAS\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
-  (compilando archivo de origen "Render/Render.cpp")
+﻿  Bullet.cpp
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Bullet.cpp")
   
-C:\Users\Harald\OneDrive - U-tad\Year 3 Files\Semestre 2\Prog. Gráfica\PRACTICAS\P2_ProGraf\ProgGrafica_2024\Render\Render.cpp(231,50): warning C4267: 'argumento': conversión de 'size_t' a 'GLsizei'; posible pérdida de datos
-  ProgGrafica_2024.vcxproj -> C:\Users\Harald\OneDrive - U-tad\Year 3 Files\Semestre 2\Prog. Gráfica\PRACTICAS\P2_ProGraf\x64\Debug\ProgGrafica_2024.exe
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(26,17): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(38,30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(39,30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(40,30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(48,17): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  Enemy.cpp
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(42,39): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(43,39): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(50,18): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305: 'argumento': truncamiento de 'double' a '_Ty'
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305:         with
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305:         [
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305:             _Ty=float
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305:         ]
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(73,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  SpaceShip.cpp
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(50,29): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(53,29): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(56,29): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(59,29): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  Generando código...
+  ProgGrafica_2024.vcxproj -> C:\Uni\3º\ProgGraf\P2_ProGraf\x64\Debug\ProgGrafica_2024.exe

@@ -42,6 +42,52 @@ public:
         partList.clear();
     }
 
+    bool isLeaf() const {
+        return children.empty(); 
+    }
+    /// Añade un hijo al colisionador
+    void addChild(Collider* child) {
+        children.push_back(child);
+    }
+
+    /// Obtiene la lista de hijos
+    const vector<Collider*>& getChildren() const {
+        return children;
+    }
+
+    /// Obtiene el número de partículas
+    size_t getParticleCount() const {
+        return partList.size();
+    }
+
+    /// Test de colisión jerárquico (nuevo método)
+    virtual bool testHierarchical(Collider* c2) {
+        // Si ambos son hojas, usa test normal
+        if (isLeaf() && c2->isLeaf()) {
+            return test(c2);
+        }
+
+        // Si este tiene hijos, testea cada hijo
+        if (!isLeaf()) {
+            for (auto* child : children) {
+                if (child->testHierarchical(c2)) {
+                    return true;
+                }
+            }
+        }
+
+        // Si el otro tiene hijos, testea cada hijo
+        if (!c2->isLeaf()) {
+            for (auto* child : c2->getChildren()) {
+                if (testHierarchical(child)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
 protected:
     collTypes                type;      ///< Tipo concreto de este colisionador
     vector<Particle>         partList;  ///< Lista de partículas (puntos) que encierra

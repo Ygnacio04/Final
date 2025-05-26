@@ -6,31 +6,29 @@ using namespace lib;
 
 class Bullet : public Object3D {
 private:
-    float speed;
-    Vector4f direction;
-    float lifetime;
-    float maxLifetime;
+    Vector4f velocity;
     bool active;
+    float lifeTime;
+    float maxLifeTime;
     float damage;
 
 public:
-    Bullet(Vector4f startPos, Vector4f shootDirection, float bulletSpeed = 5.0f, float bulletDamage = 25.0f);
+    Bullet();
+    Bullet(Vector4f startPos, Vector4f direction, float speed = 5.0f);
+    ~Bullet();
 
     void move(double timeStep) override;
+    void updateLifetime(double timeStep);
+
+    // Getters/Setters
     bool isActive() const { return active; }
     void setActive(bool state) { active = state; }
-
-    // Métodos específicos de Bullet
-    void updateLifetime(double timeStep);
-    bool isOutOfBounds(float minX, float maxX, float minY, float maxY);
-
-    // Getters
     float getDamage() const { return damage; }
-    Vector4f getDirection() const { return direction; }
-    float getSpeed() const { return speed; }
-    float getLifetime() const { return lifetime; }
+    Vector4f getVelocity() const { return velocity; }
 
-    // Setters
-    void setDirection(Vector4f newDirection) { direction = newDirection; }
-    void setSpeed(float newSpeed) { speed = newSpeed; }
+    // Crear colisionador a nivel de píxel
+    void createPixelCollider();
+
+private:
+    void checkBounds();
 };
