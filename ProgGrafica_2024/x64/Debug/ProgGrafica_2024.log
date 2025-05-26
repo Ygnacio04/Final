@@ -2,31 +2,664 @@
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
   (compilando archivo de origen "Bullet.cpp")
   
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(10,20): error C3646: 'objectType': especificador de invalidación desconocido
+  (compilando archivo de origen "Bullet.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(10,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+  (compilando archivo de origen "Bullet.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(15,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "Bullet.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(15,22): error C2065: 'TYPE_BULLET': identificador no declarado
+  (compilando archivo de origen "Bullet.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(31,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "Bullet.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(31,22): error C2065: 'TYPE_BULLET': identificador no declarado
+  (compilando archivo de origen "Bullet.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(53,33): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Bullet.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(57,33): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Bullet.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(5,9): error C2084: la función 'Bullet::Bullet(void)' ya tiene un cuerpo
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(14,5):
+      vea la definición anterior de “Bullet::Bullet”
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(6,5): error C2065: 'velocity': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(7,5): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(8,5): error C2065: 'lifeTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(9,5): error C2065: 'maxLifeTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(10,5): error C2065: 'damage': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(13,5): error C3861: 'createPixelCollider': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(16,9): error C2511: 'Bullet::Bullet(lib::Vector4f,lib::Vector4f,float)': la función miembro sobrecargada no se ha encontrado en 'Bullet'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(8,7):
+      vea la declaración de 'Bullet'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(16,79): error C2550: 'Bullet::{ctor}': las listas de inicializadores de constructor solo se permiten en las definiciones de constructor
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(17,5): error C2597: referencia no válida a miembro no static 'Object3D::position'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Object3D\Object3D.h(17,14):
+      vea la declaración de 'Object3D::position'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(18,5): error C2065: 'velocity': identificador no declarado
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(26,17): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(38,30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(39,30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(40,30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(48,17): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(30,10): error C2600: 'Bullet::~Bullet': no se puede definir una función miembro especial generada por el compilador (se debe declarar primero en la clase)
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(34,14): error C2084: la función 'void Bullet::move(double)' ya tiene un cuerpo
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(50,10):
+      vea la definición anterior de “Bullet::move”
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(35,10): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(38,19): error C2065: 'velocity': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(39,19): error C2065: 'velocity': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(40,19): error C2065: 'velocity': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(42,5): error C3861: 'updateLifetime': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(43,5): error C3861: 'checkBounds': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(35,5): warning C4390: ';': se encontró una instrucción controlada vacía; ¿es esa la intención?
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(47,14): error C2039: "updateLifetime": no es un miembro de "Bullet"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(8,7):
+      vea la declaración de 'Bullet'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(48,5): error C2065: 'lifeTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(49,9): error C2065: 'lifeTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(49,21): error C2065: 'maxLifeTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(50,9): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(54,14): error C2039: "checkBounds": no es un miembro de "Bullet"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(8,7):
+      vea la declaración de 'Bullet'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(58,9): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(58,32): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(59,9): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(59,32): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(60,9): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(64,14): error C2039: "createPixelCollider": no es un miembro de "Bullet"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(8,7):
+      vea la declaración de 'Bullet'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(65,10): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(65,18): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(67,9): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(73,9): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(78,5): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(81,45): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(82,46): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(85,25): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(86,29): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(87,27): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(87,52): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(87,25): error C2530: 'pixel': se deben inicializar las referencias
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(90,17): error C3536: 'pixel': no se puede usar antes de inicializarse
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(94,60): error C2065: 'scale': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(95,61): error C2065: 'scale': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(110,17): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(116,9): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.cpp(117,9): error C2065: 'coll': identificador no declarado
   Enemy.cpp
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
   (compilando archivo de origen "Enemy.cpp")
   
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(42,39): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(43,39): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(50,18): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(10,20): error C3646: 'objectType': especificador de invalidación desconocido
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(10,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(15,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(15,22): error C2065: 'TYPE_BULLET': identificador no declarado
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(31,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(31,22): error C2065: 'TYPE_BULLET': identificador no declarado
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(53,33): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(57,33): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(9,20): error C3646: 'objectType': especificador de invalidación desconocido
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(9,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(16,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(16,22): error C2065: 'TYPE_ENEMY': identificador no declarado
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(34,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(34,22): error C2065: 'TYPE_ENEMY': identificador no declarado
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(54,44): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(61,44): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(69,36): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "Enemy.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(6,8): error C2084: la función 'Enemy::Enemy(void)' ya tiene un cuerpo
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(15,5):
+      vea la definición anterior de “Enemy::Enemy”
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(7,5): error C2065: 'speed': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(8,5): error C2065: 'health': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(9,5): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(10,5): error C2065: 'direction': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(11,5): error C2065: 'moveTimer': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(12,5): error C2065: 'changeDirectionTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(25,5): error C3861: 'createPixelCollider': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(28,8): error C2511: 'Enemy::Enemy(lib::Vector4f)': la función miembro sobrecargada no se ha encontrado en 'Enemy'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(7,7):
+      vea la declaración de 'Enemy'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(28,43): error C2550: 'Enemy::{ctor}': las listas de inicializadores de constructor solo se permiten en las definiciones de constructor
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(29,5): error C2597: referencia no válida a miembro no static 'Object3D::position'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Object3D\Object3D.h(17,14):
+      vea la declaración de 'Object3D::position'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(32,9): error C2600: 'Enemy::~Enemy': no se puede definir una función miembro especial generada por el compilador (se debe declarar primero en la clase)
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(36,13): error C2084: la función 'void Enemy::move(double)' ya tiene un cuerpo
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(48,10):
+      vea la definición anterior de “Enemy::move”
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(37,10): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(39,5): error C3861: 'updateAI': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(42,19): error C2065: 'direction': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(42,33): error C2065: 'speed': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(43,19): error C2065: 'direction': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(43,33): error C2065: 'speed': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(45,5): error C3861: 'bounceOffBounds': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(37,5): warning C4390: ';': se encontró una instrucción controlada vacía; ¿es esa la intención?
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(49,13): error C2039: "updateAI": no es un miembro de "Enemy"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(7,7):
+      vea la declaración de 'Enemy'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(50,5): error C2065: 'moveTimer': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(53,9): error C2065: 'moveTimer': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(53,22): error C2065: 'changeDirectionTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(54,9): error C3861: 'changeDirection': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(55,9): error C2065: 'moveTimer': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(59,13): error C2039: "changeDirection": no es un miembro de "Enemy"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(7,7):
+      vea la declaración de 'Enemy'
+  
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305: 'argumento': truncamiento de 'double' a '_Ty'
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305:         with
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305:         [
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305:             _Ty=float
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(62,63): warning C4305:         ]
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(73,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(65,5): error C2065: 'direction': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(73,5): error C2065: 'rotation': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(76,13): error C2039: "bounceOffBounds": no es un miembro de "Enemy"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(7,7):
+      vea la declaración de 'Enemy'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(80,9): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(80,32): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(81,9): error C2065: 'direction': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(81,24): error C2065: 'direction': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,9): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,57): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,45): error C2672: 'std::min': no se encontró una función sobrecargada que coincida
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(105,26):
+      puede ser '_Ty std::min(std::initializer_list<_Elem>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,45):
+          "_Ty std::min(std::initializer_list<_Elem>)": no se pudo deducir el argumento plantilla para "std::initializer_list<_Elem>" de "const float"
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(102,26):
+      o       '_Ty std::min(std::initializer_list<_Elem>,_Pr)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,45):
+          "_Ty std::min(std::initializer_list<_Elem>,_Pr)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(95,6):
+      o       'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,45):
+          "const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(85,33):
+      o       'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,45):
+          "const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)": espera 3 argumentos - 1 proporcionado
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,27): error C2672: 'std::max': no se encontró una función sobrecargada que coincida
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(82,26):
+      puede ser '_Ty std::max(std::initializer_list<_Elem>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,27):
+          "_Ty std::max(std::initializer_list<_Elem>)": no se pudo deducir el argumento plantilla para "std::initializer_list<_Elem>" de "float"
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(79,26):
+      o       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,27):
+          "_Ty std::max(std::initializer_list<_Elem>,_Pr)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(72,6):
+      o       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,27):
+          "const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(62,33):
+      o       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(82,27):
+          "const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)": espera 3 argumentos - 1 proporcionado
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(85,9): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(85,32): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(86,9): error C2065: 'direction': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(86,24): error C2065: 'direction': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,9): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,57): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,45): error C2672: 'std::min': no se encontró una función sobrecargada que coincida
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(105,26):
+      puede ser '_Ty std::min(std::initializer_list<_Elem>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,45):
+          "_Ty std::min(std::initializer_list<_Elem>)": no se pudo deducir el argumento plantilla para "std::initializer_list<_Elem>" de "const float"
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(102,26):
+      o       '_Ty std::min(std::initializer_list<_Elem>,_Pr)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,45):
+          "_Ty std::min(std::initializer_list<_Elem>,_Pr)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(95,6):
+      o       'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,45):
+          "const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(85,33):
+      o       'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,45):
+          "const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)": espera 3 argumentos - 1 proporcionado
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,27): error C2672: 'std::max': no se encontró una función sobrecargada que coincida
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(82,26):
+      puede ser '_Ty std::max(std::initializer_list<_Elem>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,27):
+          "_Ty std::max(std::initializer_list<_Elem>)": no se pudo deducir el argumento plantilla para "std::initializer_list<_Elem>" de "float"
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(79,26):
+      o       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,27):
+          "_Ty std::max(std::initializer_list<_Elem>,_Pr)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(72,6):
+      o       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,27):
+          "const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(62,33):
+      o       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(87,27):
+          "const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)": espera 3 argumentos - 1 proporcionado
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(91,13): error C2039: "takeDamage": no es un miembro de "Enemy"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(7,7):
+      vea la declaración de 'Enemy'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(92,5): error C2065: 'health': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(93,9): error C2065: 'health': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(94,9): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(99,13): error C2039: "createPixelCollider": no es un miembro de "Enemy"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(7,7):
+      vea la declaración de 'Enemy'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(100,10): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(100,18): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(105,5): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(108,45): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(109,46): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(112,25): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(113,29): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(114,27): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(114,52): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(114,25): error C2530: 'pixel': se deben inicializar las referencias
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(117,17): error C3536: 'pixel': no se puede usar antes de inicializarse
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(121,60): error C2065: 'scale': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(122,61): error C2065: 'scale': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(137,17): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(142,9): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.cpp(143,9): error C2065: 'coll': identificador no declarado
+  main.cpp
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(10,20): error C3646: 'objectType': especificador de invalidación desconocido
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(10,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(15,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(15,22): error C2065: 'TYPE_BULLET': identificador no declarado
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(31,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(31,22): error C2065: 'TYPE_BULLET': identificador no declarado
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(53,33): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(57,33): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(42,33): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(45,33): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(48,33): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(51,33): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(54,44): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(61,44): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Enemy.h(69,36): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "main.cpp")
+  
   SpaceShip.cpp
 C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(61,29): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
   (compilando archivo de origen "SpaceShip.cpp")
   
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(50,29): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(53,29): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(56,29): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(59,29): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(10,20): error C3646: 'objectType': especificador de invalidación desconocido
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(10,5): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(15,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(15,22): error C2065: 'TYPE_BULLET': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(31,9): error C2065: 'objectType': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(31,22): error C2065: 'TYPE_BULLET': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(53,33): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Bullet.h(57,33): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(41,13): error C2653: 'InputManager': no es un nombre de clase o espacio de nombres
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(41,27): error C2065: 'keyState': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(41,51): error C2653: 'InputManager': no es un nombre de clase o espacio de nombres
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(41,65): error C2065: 'keyState': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(42,33): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(44,13): error C2653: 'InputManager': no es un nombre de clase o espacio de nombres
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(44,27): error C2065: 'keyState': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(44,51): error C2653: 'InputManager': no es un nombre de clase o espacio de nombres
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(44,65): error C2065: 'keyState': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(45,33): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(47,13): error C2653: 'InputManager': no es un nombre de clase o espacio de nombres
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(47,27): error C2065: 'keyState': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(47,51): error C2653: 'InputManager': no es un nombre de clase o espacio de nombres
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(47,65): error C2065: 'keyState': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(48,33): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(50,13): error C2653: 'InputManager': no es un nombre de clase o espacio de nombres
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(50,27): error C2065: 'keyState': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(50,51): error C2653: 'InputManager': no es un nombre de clase o espacio de nombres
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(50,65): error C2065: 'keyState': identificador no declarado
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(51,33): warning C4244: '-=': conversión de 'double' a 'float'; posible pérdida de datos
+  (compilando archivo de origen "SpaceShip.cpp")
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(6,12): error C2084: la función 'SpaceShip::SpaceShip(void)' ya tiene un cuerpo
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(22,5):
+      vea la definición anterior de “SpaceShip::SpaceShip”
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(7,5): error C2065: 'speed': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(8,5): error C2065: 'health': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(9,5): error C2065: 'maxHealth': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(10,5): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(11,5): error C2065: 'fireRate': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(12,5): error C2065: 'lastFireTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(13,5): error C2065: 'maxBullets': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(14,5): error C2065: 'canMove': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(19,5): error C3861: 'createPixelCollider': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(22,12): error C2511: 'SpaceShip::SpaceShip(lib::Vector4f)': la función miembro sobrecargada no se ha encontrado en 'SpaceShip'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(15,7):
+      vea la declaración de 'SpaceShip'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(22,55): error C2550: 'SpaceShip::{ctor}': las listas de inicializadores de constructor solo se permiten en las definiciones de constructor
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(23,5): error C2597: referencia no válida a miembro no static 'Object3D::position'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\Object3D\Object3D.h(17,14):
+      vea la declaración de 'Object3D::position'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(26,13): error C2600: 'SpaceShip::~SpaceShip': no se puede definir una función miembro especial generada por el compilador (se debe declarar primero en la clase)
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(28,25): error C2065: 'bullets': identificador no declarado
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(26,13):
+      Diagnóstico en la función 'SpaceShip::~SpaceShip(void)' generada por el compilador
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(28,16): error C3531: 'bullet': un símbolo cuyo tipo contiene 'auto' debe tener un inicializador
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(26,13):
+      Diagnóstico en la función 'SpaceShip::~SpaceShip(void)' generada por el compilador
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(28,23): error C2143: error de sintaxis: falta ';' delante de ':'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(26,13):
+      Diagnóstico en la función 'SpaceShip::~SpaceShip(void)' generada por el compilador
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(28,32): error C2143: error de sintaxis: falta ';' delante de ')'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(26,13):
+      Diagnóstico en la función 'SpaceShip::~SpaceShip(void)' generada por el compilador
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(29,9): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(26,13):
+      Diagnóstico en la función 'SpaceShip::~SpaceShip(void)' generada por el compilador
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(31,5): error C2065: 'bullets': identificador no declarado
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(26,13):
+      Diagnóstico en la función 'SpaceShip::~SpaceShip(void)' generada por el compilador
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(34,17): error C2084: la función 'void SpaceShip::move(double)' ya tiene un cuerpo
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(37,10):
+      vea la definición anterior de “SpaceShip::move”
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(35,10): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(37,5): error C3861: 'handleInput': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(38,5): error C3861: 'updateBullets': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(39,5): error C3861: 'constrainToBounds': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(35,5): warning C4390: ';': se encontró una instrucción controlada vacía; ¿es esa la intención?
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(43,17): error C2039: "handleInput": no es un miembro de "SpaceShip"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(15,7):
+      vea la declaración de 'SpaceShip'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(44,10): error C2065: 'canMove': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(50,23): error C2065: 'speed': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(53,23): error C2065: 'speed': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(56,23): error C2065: 'speed': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(59,23): error C2065: 'speed': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(62,5): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(63,5): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(68,9): error C3861: 'shoot': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(72,17): error C2511: 'void SpaceShip::shoot(lib::Vector4f)': la función miembro sobrecargada no se ha encontrado en 'SpaceShip'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(15,7):
+      vea la declaración de 'SpaceShip'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(76,38): error C2065: 'fireRate': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(76,46): error C2059: error de sintaxis: ')'
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(76,48): error C2143: error de sintaxis: falta ';' delante de '{'
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(78,5): error C2143: error de sintaxis: falta ';' delante de '}'
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(81,24): error C2947: se esperaba '>' para terminar lista de argumentos de plantilla pero se encontró '>='
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(76,23): error C2062: tipo 'unknown-type' inesperado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(81,39): error C2143: error de sintaxis: falta ';' delante de '{'
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(82,9): error C3861: 'cleanupInactiveBullets': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(83,13): error C2065: 'bullets': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(83,31): error C2065: 'maxBullets': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(89,26): error C2660: 'lib::make_vector4f': la función no acepta 2 argumentos
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\prgr\lib.h(33,14):
+      vea la declaración de 'lib::make_vector4f'
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(89,26):
+      al hacer coincidir la lista de argumentos '()'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(96,35): error C2661: 'Bullet::Bullet': ninguna función sobrecargada acepta 3 argumentos
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(96,35):
+      al hacer coincidir la lista de argumentos '(lib::Vector4f, lib::Vector4f, float)'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(97,5): error C2065: 'bullets': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(99,5): error C2065: 'lastFireTime': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(100,50): error C2065: 'bullets': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(103,17): error C2039: "updateBullets": no es un miembro de "SpaceShip"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(15,7):
+      vea la declaración de 'SpaceShip'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(104,25): error C2065: 'bullets': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(104,16): error C3531: 'bullet': un símbolo cuyo tipo contiene 'auto' debe tener un inicializador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(104,23): error C2143: error de sintaxis: falta ';' delante de ':'
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(104,32): error C2143: error de sintaxis: falta ';' delante de ')'
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(114,9): error C3861: 'cleanupInactiveBullets': no se encontró el identificador
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(119,17): error C2039: "constrainToBounds": no es un miembro de "SpaceShip"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(15,7):
+      vea la declaración de 'SpaceShip'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,5): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,53): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,41): error C2672: 'std::min': no se encontró una función sobrecargada que coincida
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(105,26):
+      puede ser '_Ty std::min(std::initializer_list<_Elem>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,41):
+          "_Ty std::min(std::initializer_list<_Elem>)": no se pudo deducir el argumento plantilla para "std::initializer_list<_Elem>" de "const float"
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(102,26):
+      o       '_Ty std::min(std::initializer_list<_Elem>,_Pr)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,41):
+          "_Ty std::min(std::initializer_list<_Elem>,_Pr)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(95,6):
+      o       'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,41):
+          "const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(85,33):
+      o       'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,41):
+          "const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)": espera 3 argumentos - 1 proporcionado
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,23): error C2672: 'std::max': no se encontró una función sobrecargada que coincida
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(82,26):
+      puede ser '_Ty std::max(std::initializer_list<_Elem>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,23):
+          "_Ty std::max(std::initializer_list<_Elem>)": no se pudo deducir el argumento plantilla para "std::initializer_list<_Elem>" de "float"
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(79,26):
+      o       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,23):
+          "_Ty std::max(std::initializer_list<_Elem>,_Pr)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(72,6):
+      o       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,23):
+          "const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(62,33):
+      o       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(122,23):
+          "const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)": espera 3 argumentos - 1 proporcionado
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,5): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,49): error C2065: 'position': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,39): error C2672: 'std::min': no se encontró una función sobrecargada que coincida
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(105,26):
+      puede ser '_Ty std::min(std::initializer_list<_Elem>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,39):
+          "_Ty std::min(std::initializer_list<_Elem>)": no se pudo deducir el argumento plantilla para "std::initializer_list<_Elem>" de "float"
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(102,26):
+      o       '_Ty std::min(std::initializer_list<_Elem>,_Pr)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,39):
+          "_Ty std::min(std::initializer_list<_Elem>,_Pr)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(95,6):
+      o       'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,39):
+          "const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(85,33):
+      o       'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,39):
+          "const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)": espera 3 argumentos - 1 proporcionado
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,23): error C2672: 'std::max': no se encontró una función sobrecargada que coincida
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(82,26):
+      puede ser '_Ty std::max(std::initializer_list<_Elem>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,23):
+          "_Ty std::max(std::initializer_list<_Elem>)": no se pudo deducir el argumento plantilla para "std::initializer_list<_Elem>" de "float"
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(79,26):
+      o       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,23):
+          "_Ty std::max(std::initializer_list<_Elem>,_Pr)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(72,6):
+      o       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,23):
+          "const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)": espera 2 argumentos - 1 proporcionado
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\utility(62,33):
+      o       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(123,23):
+          "const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)": espera 3 argumentos - 1 proporcionado
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(126,17): error C2039: "takeDamage": no es un miembro de "SpaceShip"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(15,7):
+      vea la declaración de 'SpaceShip'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(127,5): error C2065: 'health': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(128,47): error C2065: 'health': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(128,64): error C2065: 'maxHealth': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(130,9): error C2065: 'health': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(131,9): error C2065: 'active': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(136,17): error C2039: "createPixelCollider": no es un miembro de "SpaceShip"
+      C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.h(15,7):
+      vea la declaración de 'SpaceShip'
+  
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(137,10): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(137,18): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(142,5): error C2065: 'coll': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(145,45): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(146,46): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(149,25): error C2065: 'mat': identificador no declarado
+C:\Uni\3º\ProgGraf\P2_ProGraf\ProgGrafica_2024\SpaceShip.cpp(149,25): error C1003: el recuento de errores supera 100; se detiene la compilación
   Generando código...
-  ProgGrafica_2024.vcxproj -> C:\Uni\3º\ProgGraf\P2_ProGraf\x64\Debug\ProgGrafica_2024.exe

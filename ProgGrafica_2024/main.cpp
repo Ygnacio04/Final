@@ -72,154 +72,38 @@ int main() {
 }
 */
 
-/**/
 int main() {
-    Render render(640, 480);
-    render.initGL();
+    Render* r = new Render(720, 1080);
+    r->initGL();
 
-    // Cámara para vista 2D
-    Camera* cam = new Camera({0,0,5,1},    // Posición más alejada para vista 2D
-                            {0,0,0,0},
-                            {0,0,0,1},
-                            {0,1,0,0},
-                            45.0f, 640.0f / 480.0f, 0.1f, 100.0f);
-    render.putCamera(cam);
-
-    // Luces para el escenario 2D
-    Light* light = new Light(
-        { 0,0,0,1 },
-        { 0,0,5,1 },   // Luz desde arriba
-        { 1,1,1,1 },   // Luz blanca
-        0.3f, 0.7f, 0.2f,
-        Light::POINT
+    // Cámara para 2D (más alejada)
+    Camera* cam = new Camera(
+        make_vector4f(0, 0, 5, 1),    // Posición alejada
+        make_vector4f(0, 0, 0, 0),    // Rotación
+        make_vector4f(0, 0, 0, 1),    // LookAt origen
+        make_vector4f(0, 1, 0, 0),    // Up
+        45.0f, 1080.0f / 720.0f, 0.1f, 100.0f
     );
-    render.putLight(light);
+    r->putCamera(cam);
 
-    std::cout << "=== ESCENARIO NAVES2D ===" << std::endl;
-    std::cout << "Controles:" << std::endl;
-    std::cout << "WASD - Mover nave" << std::endl;
-    std::cout << "ESPACIO - Disparar" << std::endl;
-    std::cout << "=========================" << std::endl;
+    // Luz
+    Light* light = new Light(
+        make_vector4f(0, 0, -1, 0),   // Dirección
+        make_vector4f(0, 0, 8, 1),    // Posición alejada
+        make_vector4f(1, 1, 1, 1),    // Color blanco
+        0.3f, 0.7f, 0.5f, Light::POINT
+    );
+    r->putLight(light);
 
-    // === CREAR OBJETOS DEL JUEGO ===
-    
-    // Nave del jugador
+    // Objetos
     SpaceShip* player = new SpaceShip();
-    render.putObject(100, player); // ID especial para el jugador
-    
-    // Crear enemigos
-    std::vector<Enemy*> enemies;
-    for (int i = 0; i < 3; i++) {
-        Vector4f enemyPos = make_vector4f(
-            -3.0f + i * 3.0f,  // Distribuir horizontalmente
-            2.0f,               // Parte superior de la pantalla
-            0.0f, 1.0f
-        );
-        
-        Enemy* enemy = new Enemy(enemyPos);
-        enemies.push_back(enemy);
-        render.putObject(200 + i, enemy); // IDs 200, 201, 202...
-    }
-    
-    std::cout << "Juego iniciado con " << enemies.size() << " enemigos" << std::endl;
+    r->putObject(player->id, player);
 
-    // === BUCLE PRINCIPAL DEL JUEGO ===
-    while (!glfwWindowShouldClose(render.window)) {
-        glfwPollEvents();
+    Enemy* enemy = new Enemy();
+    enemy->position = make_vector4f(0, 2, 0, 1);
+    r->putObject(enemy->id, enemy);
 
-        // Actualizar lógica del juego
-        
-        // 1. Mover jugador
-        if (player->isActive()) {
-            player->move(1.0f);
-        }
-        
-        // 2. Mover enemigos
-        for (auto* enemy : enemies) {
-            if (enemy->isActive()) {
-                enemy->move(1.0f);
-            }
-        }
-        
-        // 3. Detectar colisiones bala-enemigo
-        if (player->isActive()) {
-            auto& bullets = player->getBullets();
-            
-            for (auto* bullet : bullets) {
-                if (!bullet->isActive()) continue;
-                
-                for (auto* enemy : enemies) {
-                    if (!enemy->isActive()) continue;
-                    
-                    // Test de colisión píxel a píxel
-                    if (bullet->coll && enemy->coll) {
-                        if (bullet->coll->testHierarchical(enemy->coll)) {
-                            std::cout << "¡Impacto! Enemigo alcanzado" << std::endl;
-                            enemy->takeDamage(bullet->getDamage());
-                            bullet->setActive(false);
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-        
-        // 4. Detectar colisiones enemigo-jugador
-        if (player->isActive()) {
-            for (auto* enemy : enemies) {
-                if (!enemy->isActive()) continue;
-                
-                if (player->coll && enemy->coll) {
-                    if (player->coll->testHierarchical(enemy->coll)) {
-                        std::cout << "¡Colisión con enemigo!" << std::endl;
-                        player->takeDamage(10.0f);
-                        enemy->setActive(false);
-                    }
-                }
-            }
-        }
-
-        // Renderizar todo
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        
-        // Dibujar jugador
-        if (player->isActive()) {
-            render.drawGL(player);
-        }
-        
-        // Dibujar enemigos
-        for (auto* enemy : enemies) {
-            if (enemy->isActive()) {
-                render.drawGL(enemy);
-            }
-        }
-        
-        // Dibujar balas
-        if (player->isActive()) {
-            auto& bullets = player->getBullets();
-            for (auto* bullet : bullets) {
-                if (bullet->isActive()) {
-                    render.drawGL(bullet);
-                }
-            }
-        }
-
-        glfwSwapBuffers(render.window);
-        
-        // Salir si el jugador muere
-        if (!player->isActive()) {
-            std::cout << "Presiona cualquier tecla para salir..." << std::endl;
-            std::cin.get();
-            break;
-        }
-    }
-
-    // Cleanup
-    delete player;
-    for (auto* enemy : enemies) {
-        delete enemy;
-    }
+    r->mainLoop();
 
     return 0;
 }
-/**/
